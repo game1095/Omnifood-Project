@@ -3,6 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Omnifood is an food subscription">
+
+        <!-- Work For Desktop Version -->
+        <link rel="icon" href="./img/favicon.png">
+
+        <!-- Work For iOS Home Screen -->
+        <link rel="apple-touch-icon" href="./img/apple-touch-icon.png">
+
+        <!-- Work For Android Home Screen -->
+        <link rel="minifest" href="./minifest.webmanifest">
+
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/general.css">
         <link rel="stylesheet" href="./css/queries.css">
@@ -13,9 +24,7 @@
             rel="stylesheet">
         <script type="module"
             src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule
-            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <title>Omnifood</title>
+        <title>Omnifood &mdash; Never cook again</title>
     </head>
     <body>
         <header class="header">
@@ -25,12 +34,21 @@
             </a>
             <nav class="main-nav">
                 <ul class="main-nav-list">
-                    <li><a class="main-nav-link" href="#">How it works</a></li>
-                    <li><a class="main-nav-link" href="#">Meals</a></li>
-                    <li><a class="main-nav-link" href="#">Testimonials</a></li>
-                    <li><a class="main-nav-link" href="#">Pricing</a></li>
                     <li>
-                        <a class="main-nav-link nav-cta" href="#">
+                        <a class="main-nav-link" href="#how">How it works</a>
+                    </li>
+                    <li>
+                        <a class="main-nav-link" href="#meal">Meals</a>
+                    </li>
+                    <li>
+                        <a class="main-nav-link"
+                            href="#testimonial">Testimonials</a>
+                    </li>
+                    <li>
+                        <a class="main-nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li>
+                        <a class="main-nav-link nav-cta" href="#cta">
                             Try for Free
                         </a>
                     </li>
@@ -59,9 +77,10 @@
                             and
                             nutritional needs.
                         </p>
-                        <a href="#" class="btn btn--full margin-right-sm">Start
+                        <a href="#cta"
+                            class="btn btn--full margin-right-sm">Start
                             eating well</a>
-                        <a href="#" class="btn btn--outline">Learn more
+                        <a href="#how" class="btn btn--outline">Learn more
                             &darr;</a>
                         <div class="delivered-meals">
                             <div class="delivered-imgs">
@@ -86,8 +105,14 @@
                         </div>
                     </div>
                     <div class="hero-img-box">
-                        <img src="./img/hero.png" class="hero-img"
-                            alt="Women enjoy food , meals and food bowl in table">
+                        <picture>
+                            <source srcset="./img/hero.webp" type="image/webp">
+                            <source srcset="./img/hero-min.png"
+                                type="image/png">
+                            <img src="./img/hero-min.png" class="hero-img"
+                                alt="Women enjoy food , meals and food bowl in table">
+                        </picture>
+
                     </div>
                 </div>
             </section>
@@ -104,7 +129,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section-how">
+            <section class="section-how" id="how">
                 <div class="container">
                     <span class="subheading">How it Work</span>
                     <h2 class="heading-secondary">Your daily dose of health in 3
@@ -168,7 +193,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section-meals">
+            <section class="section-meals" id="meal">
                 <div class="container center-text">
                     <span class="subheading">Meals</span>
                     <h2 class="heading-secondary">Omnifood AI
@@ -294,7 +319,7 @@
                 </div>
             </section>
 
-            <section class="section-testimonials">
+            <section class="section-testimonials" id="testimonial">
                 <div class="testimonial-container">
                     <span class="subheading">Testimonials</span>
                     <h2 class="heading-secondary">
@@ -396,7 +421,7 @@
                 </div>
             </section>
 
-            <section class="section-pricing">
+            <section class="section-pricing" id="pricing">
                 <div class="container">
                     <span class="subheading">Pricing</span>
                     <h2 class="heading-secondary">
@@ -550,7 +575,7 @@
                 </div>
             </section>
 
-            <section class="section-cta">
+            <section class="section-cta" id="cta">
                 <div class="container">
                     <div class="cta">
                         <div class="cta-text-box">
@@ -634,7 +659,8 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright">Copyright &copy; 2024 by Omnifood ,
+                    <p class="copyright">Copyright &copy; <span
+                            class="year"></span> by Omnifood ,
                         Inc. All right reserve</p>
                 </div>
                 <div class="address-col">
@@ -710,4 +736,5 @@
             </div>
         </footer>
     </body>
+    <script src="./script.js"></script>
 </html>
